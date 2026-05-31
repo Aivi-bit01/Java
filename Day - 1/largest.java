@@ -3,7 +3,8 @@ import java.util.*;
 
 class Largest {
 
-    public static int largestElement(int[] nums) {
+    //1st method
+    public static int largestElement(int[] nums) {  //tc-O(nlogn) sc- O(1);
         // Sort array
         Arrays.sort(nums);
 
@@ -17,18 +18,15 @@ class Largest {
         return largest;
     }
 
-    public static int ndApproach(int[] nums) {
-
+    //2nd method
+    public static int ndApproach(int[] nums) {  //tc - o(n), sc - O(1);
         // Initialize max as the first element
         int max = nums[0];
 
         // Traverse the entire array
         for (int i = 1; i < nums.length; i++) {
 
-            /*
-             * If current element is greater
-             * than max, update max
-             */
+            // If current element is greater than max, update max
             if (nums[i] > max) {
                 max = nums[i];
             }
@@ -36,6 +34,8 @@ class Largest {
         // Return the largest element found
         return max;
     }
+
+
 
     public static void main(String[] args) {
         int[] arr = { 3, 2, 1, 5, 2 };

@@ -1,0 +1,15 @@
+class Solution {
+    public int singleNumber(int[] nums) {
+        int results=0;
+        for(int i=0;i<nums.length;i++){
+            results=results^nums[i];
+        }
+        return results;
+    }                                                               //nums={2,2,1,4,4}
+}                                                               //i=0 results=0  results=0^2 ->000^010=2
+                                                                //i=1 results=2 results=2^2 ->0
+                                                                //i=2 results=0 results=0^1 ->1
+                                                                //i=3 results=1 results= 1^4 ->5
+                                                                //i=4 results=5 results= 5^4 ->1
+                                                                //i=5 loop stop
+                                                                //results=1

@@ -1,6 +1,12 @@
 class matrix {
-    public static void matrixPrint(int[] matrix, int target) {
-        
+    public static void matrixPrint(int[][] matrix, int target) {
+        for(int i = 0; i < matrix.length; i++){
+            for(int j = 0; j <matrix[i].length; j++){
+                if(matrix[i][j] == target){
+                    System.out.println(i + " " + j);
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -10,5 +16,7 @@ class matrix {
                 { 11, 12, 13, 14, 15 }, // i = 2
                 { 16, 17, 18, 19, 20 } // i = 3
         };
+        int target = 19;
+        matrixPrint(matrix, target);
     }
 }
